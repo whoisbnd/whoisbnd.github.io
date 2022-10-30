@@ -1,3 +1,4 @@
+
 <html class=" hwdxyhasfs idc0_343"><head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>BND</title>
@@ -36,11 +37,35 @@ canvas{
 }
 .nix > .text {
   position: absolute;
-  inset: 0;
-  background-color: #000;
+  /* inset: 0; */
+  /* background-color: #000; */
   color: #fff;
-  mix-blend-mode: multiply;
-  user-select: none;
+  /* mix-blend-mode: multiply; */
+  /* user-select: none; */
+}
+.nix  > .text {
+	background:linear-gradient(-45deg,
+   rgba(255, 0, 0, 1) 0%,
+   rgba(255, 255, 0, 1) 33%,
+   rgba(0, 192, 255, 1) 66%,
+   rgba(192, 0, 255, 1) 100%);
+	background-size: 300%;
+	font-family: Fredoka One;
+	font-weight: 400;
+	font-size: 5vw;
+	 /* letter-spacing: -5px; */
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
 }
 
     </style>
@@ -50,10 +75,10 @@ canvas{
         </canvas>
         <div class="nix">
             
-          <video class="bg-video" autoplay="" loop="">
-            <source src="nix.mp4" type="video/mp4">
-          </video>
-            <span class="text" style=""><span style="font-family: Arial, Helvetica, sans-serif;font-weight: 600;margin-bottom: 2rem;display: block;">BND</span>wir wissen nichts.</span>
+          <!-- <video class="bg-video" autoplay="" loop="" muted=""> -->
+            <!-- <source src="nix.mp4" type="video/mp4"> -->
+          <!-- </video> -->
+            <span class="text" style=""><span style="font-family: Arial, Helvetica, sans-serif;font-weight: 600;margin-bottom: 2rem;display: block;">BND<br></span>wir wissen nichts.</span>
         </div>
         <script>
             var canvas = document.getElementById('nokey'),
