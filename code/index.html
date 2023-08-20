@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+  background: #22272e!important;
+        }
+ 
+.hljs {
+  display: block!important;
+  overflow-x: auto!important;
+  padding: 0.5em!important;
+
+  color: #cdd9e5!important;
+  background: #22272e!important;
+}
+
+.hljs-comment,
+.hljs-punctuation {
+  color: #768390!important;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-meta,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: #6cb6ff!important;
+}
+
+.hljs-variable,
+.hljs-literal,
+.hljs-number,
+.hljs-doctag {
+  color: #f69d50!important;
+}
+
+.hljs-params {
+  color: #cdd9e5!important;
+}
+
+.hljs-function {
+  color: #dcbdfb!important;
+}
+
+.hljs-class,
+.hljs-tag,
+.hljs-title,
+.hljs-built_in {
+  color: #8ddb8c!important;
+}
+
+.hljs-keyword,
+.hljs-type,
+.hljs-builtin-name,
+.hljs-meta-keyword,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f47067!important;
+}
+
+.hljs-string,
+.hljs-undefined {
+  color: #96d0ff!important;
+}
+
+.hljs-regexp {
+  color: #96d0ff!important;
+}
+
+.hljs-symbol {
+  color: #6cb6ff!important;
+}
+
+.hljs-bullet {
+  color: #f69d50!important;
+}
+
+.hljs-section {
+  color: #6cb6ff!important;
+  font-weight: bold!important;
+}
+
+.hljs-quote,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  color: #8ddb8c!important;
+}
+
+.hljs-emphasis {
+  color: #f69d50!important;
+  font-style: italic!important;
+}
+
+.hljs-strong {
+  color: #f69d50!important;
+  font-weight: bold!important;
+}
+
+.hljs-deletion {
+  color: #ff938a!important;
+  background-color: #78191b!important;
+}
+
+.hljs-addition {
+  color: #8ddb8c!important;
+  background-color: #113417!important;
+}
+
+.hljs-link {
+  color: #96d0ff!important;
+  font-style: underline!important;
+}
+
+
+    </style>
+</head>
+<body><pre><code id="codetxt"></code></pre>
+
+<script>
+async function main() {
+    if(window.location.hash.match(/\#?[a-zA-Z0-9_\-]{3,50}/)) {
+        const url = `https://pad.bnd.ovh/${window.location.hash.replace('#', '')}/raw`
+        const response = await fetch(url)
+        const text = await response.text()
+        document.getElementById('codetxt').innerHTML = text
+        hljs.highlightElement(document.getElementById('codetxt'))
+    }
+}
+main()
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</body>
+</html>
